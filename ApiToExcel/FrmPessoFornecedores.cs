@@ -22,25 +22,25 @@ namespace ApiToExcel
 
                 if (string.IsNullOrWhiteSpace(urlEntrada))
                 {
-                    await UpdateTxtJson("A url da API est· vazia.\n\nTente novamente!");
+                    await UpdateTxtJson("A url da API est√° vazia.\n\nTente novamente!");
                     return;
                 }
 
                 if (string.IsNullOrWhiteSpace(TxRouter.Text))
                 {
-                    await UpdateTxtJson("A Rota da API est· vazia.\n\nTente novamente!");
+                    await UpdateTxtJson("A Rota da API est√° vazia.\n\nTente novamente!");
                     return;
                 }
 
                 if (string.IsNullOrWhiteSpace(TxUser.Text))
                 {
-                    await UpdateTxtJson("O Usuario est· vazio.\n\nTente novamente!");
+                    await UpdateTxtJson("O Usuario est√° vazio.\n\nTente novamente!");
                     return;
                 }
 
                 if (string.IsNullOrWhiteSpace(TxPass.Text))
                 {
-                    await UpdateTxtJson("A Senha est· vazia.\n\nTente novamente!");
+                    await UpdateTxtJson("A Senha est√° vazia.\n\nTente novamente!");
                     return;
                 }
 
@@ -50,7 +50,7 @@ namespace ApiToExcel
                         Username: TxUser.Text,
                         Password: TxPass.Text);
 
-                    await UpdateTxtJson("Solicitado o acesso.");
+                    await UpdateTxtJson("Solicitando o acesso.");
 
                     using var varejoFacil = new VarejoFacilClient(
                         baseAddress: url,
@@ -70,7 +70,7 @@ namespace ApiToExcel
             catch (Exception ex)
             {
 
-                UpdateTxtJson($"Erro na requisiÁ„o: {ex.Message}");
+                UpdateTxtJson($"Erro na requisi√ß√£o: {ex.Message}");
                 throw ex;
             }
         }
